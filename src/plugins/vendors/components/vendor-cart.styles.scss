@@ -1,0 +1,175 @@
+.VendorCart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__holder {
+        margin-bottom: 1rem;
+        width: calc(100% - 32px);
+        height: 248px;
+        max-width: 567px;
+        min-width: min(calc(100% - 4px), 260px);
+        background-color: $color-white;
+        direction: rtl;
+        border-radius: 6px;
+        border: solid 0.5px $color-gray-light;
+        box-shadow: $box-shadow-2;
+    }
+
+    &__header {
+        position: relative !important;
+    }
+
+    &__image-box {
+        position: relative;
+        height: 134px;
+        max-height: 100%;
+        overflow: unset;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 6px 6px 0 0;
+        filter: brightness(0.96);
+    }
+
+    &__logo-box {
+        position: absolute;
+        right: 8px;
+        bottom: -16px;
+        width: 64px;
+        height: 64px;
+        padding: 4px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px 0;
+        background: white;
+    }
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px 16px 8px 16px;
+        height: 110px;
+        direction: rtl;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: $font-size-medium;
+        font-weight: $font-weight-medium;
+        color: $text-color;
+    }
+
+    &__stats-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__stats-comment-count {
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        color: $color-gray-light-1;
+    }
+
+    &__stats-rating-value {
+        background-color: $color-green-light-1;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2px 4px 2px 2px;
+        border-radius: 4px;
+        color: $color-green-light-2;
+
+        svg {
+            fill: $color-green-light-2 ;
+        }
+    }
+
+    &__new {
+        background: $color-gray-light-2;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        color: $text-color;
+        border-radius: 4px;
+        padding: 4px;
+    }
+
+    &__description {
+        font-size: $font-size-small;
+        font-weight: $font-size-medium;
+        color: $text-color;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 0;
+    }
+
+    &__status {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+
+        &-open {
+            font-size: $font-size-small;
+            font-weight: $font-weight-regular;
+            color: $text-color;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: fit-content;
+            height: 2.5rem;
+            padding: 2px;
+            border-radius: 4px;
+        }
+
+        &-close {
+            width: 100%;
+            padding: 2px;
+            text-align: center;
+            border-radius: 16px;
+            background-color: $color-green-light-3;
+            font-size: $font-size-small;
+            font-weight: $font-weight-regular;
+            color: $text-color-green;
+        }
+    }
+
+    &__delivery-type {
+        margin-left: 4px;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        color: $color-gray-light-1;
+    }
+}

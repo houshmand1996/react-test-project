@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62%;
+
+    @include respond(big-desktop) {
+        font-size: 100%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 88%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 80%;
+    }
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: "IRANSans" !important;
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-land) {
+        padding: 0;
+    }
+
+    @include respond(phone) {
+        padding: 0;
+    }
+
+}
